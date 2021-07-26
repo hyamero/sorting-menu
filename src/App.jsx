@@ -8,6 +8,12 @@ import MenuData from "./Components/MenuData";
 import Buttons from "./Components/Buttons";
 
 function App() {
+  const [breakfast, setBreakfast] = useState(false);
+
+  const breakfastFn = () => {
+    let lol = MenuData.filter((item) => item.category === "breakfast");
+    console.log(lol);
+  };
 
   return (
     <div
@@ -17,8 +23,8 @@ function App() {
         height: 100vh;
       `}
     >
-      <Buttons />
-      <MenuItems Items={MenuData} />
+      <Buttons breakfastFn={breakfastFn} setBreakfast={setBreakfast} />
+      <MenuItems items={MenuData} breakfast={breakfast} />
 
       <Global
         styles={css`
