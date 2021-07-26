@@ -8,19 +8,33 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
       className="Buttons"
       css={css`
         display: flex;
-        justify-content: space-between;
 
         button {
           margin: 0 2rem;
-          height: 2rem;
           border: none;
-          padding: 10px 0;
+          padding: 10px;
+          cursor: pointer;
+          transition: 0.3s linear;
+
+          &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background: #24242a;
+            transition: width 0.3s ease-in;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
 
           span {
-            padding: 6px;
+            padding: 0 5px;
             font-family: "Poppins", sans-serif;
             font-weight: 600;
             font-size: 1rem;
+            margin: auto;
           }
         }
       `}

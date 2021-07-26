@@ -18,7 +18,7 @@ function App() {
       className="App"
       css={css`
         background: #f0eff1;
-        height: 100vh;
+        height: 120vh;
       `}
     >
       <Navbar
