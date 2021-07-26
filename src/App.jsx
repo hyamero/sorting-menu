@@ -8,7 +8,10 @@ import MenuData from "./Components/MenuData";
 import Buttons from "./Components/Buttons";
 
 function App() {
+  const [all, setAll] = useState(false);
   const [breakfast, setBreakfast] = useState(false);
+  const [lunch, setLunch] = useState(false);
+  const [shakes, setShakes] = useState(false);
 
   return (
     <div
@@ -18,8 +21,21 @@ function App() {
         height: 100vh;
       `}
     >
-      <Buttons setBreakfast={setBreakfast} />
-      <MenuItems items={MenuData} breakfast={breakfast} />
+      <Buttons 
+      setAll={setAll}
+      setBreakfast={setBreakfast}
+      setLunch={setLunch}
+      setShakes={setShakes}
+       />
+
+      <MenuItems 
+      items={MenuData} 
+      all={all}
+      breakfast={breakfast}
+      lunch={lunch}
+      shakes={shakes}
+      
+      />
 
       <Global
         styles={css`

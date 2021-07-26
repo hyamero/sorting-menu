@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-const MenuItems = ({ items, breakfast }) => {
+const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
   return (
     <div
       className="MenuItems container"
@@ -27,9 +27,49 @@ const MenuItems = ({ items, breakfast }) => {
         }
       `}
     >
+      {all &&
+        items.map((item) => (
+          <div className="menu-items" key={item.id}>
+            <img
+              src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+              alt="food burger"
+            />
+            <h5 className="item-title">{item.title}</h5>
+            <h6 className="item-category">{item.category}</h6>
+            <p className="item-desc">{item.desc}</p>
+          </div>
+        ))}
       {breakfast &&
         items
           .filter((item) => item.category === "breakfast")
+          .map((item) => (
+            <div className="menu-items" key={item.id}>
+              <img
+                src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+                alt="food burger"
+              />
+              <h5 className="item-title">{item.title}</h5>
+              <h6 className="item-category">{item.category}</h6>
+              <p className="item-desc">{item.desc}</p>
+            </div>
+          ))}
+      {lunch &&
+        items
+          .filter((item) => item.category === "lunch")
+          .map((item) => (
+            <div className="menu-items" key={item.id}>
+              <img
+                src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+                alt="food burger"
+              />
+              <h5 className="item-title">{item.title}</h5>
+              <h6 className="item-category">{item.category}</h6>
+              <p className="item-desc">{item.desc}</p>
+            </div>
+          ))}
+      {shakes &&
+        items
+          .filter((item) => item.category === "shakes")
           .map((item) => (
             <div className="menu-items" key={item.id}>
               <img

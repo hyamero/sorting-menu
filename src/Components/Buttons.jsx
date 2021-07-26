@@ -2,7 +2,7 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-const Buttons = ({ setBreakfast }) => {
+const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
   return (
     <div
       className="Buttons"
@@ -17,13 +17,53 @@ const Buttons = ({ setBreakfast }) => {
         }
       `}
     >
-      <button>All</button>
-      <button 
-      onClick={() => {
+      <button
+        onClick={() => {
+          setAll(true);
+          setAll(false);
+          setBreakfast(false);
+          setLunch(false);
+          setShakes(false);
+        }}
+      >
+        All
+      </button>
+
+      <button
+        onClick={() => {
           setBreakfast(true);
-      }}>Breakfast</button>
-      <button>Lunch</button>
-      <button>Shakes</button>
+          setAll(false);
+          setAll(false);
+          setLunch(false);
+          setShakes(false);
+        }}
+      >
+        Breakfast
+      </button>
+
+      <button
+        onClick={() => {
+          setLunch(true);
+          setAll(false);
+          setAll(false);
+          setBreakfast(false);
+          setShakes(false);
+        }}
+      >
+        Lunch
+      </button>
+
+      <button
+        onClick={() => {
+          setShakes(true);
+          setAll(false);
+          setAll(false);
+          setBreakfast(false);
+          setLunch(false);
+        }}
+      >
+        Shakes
+      </button>
     </div>
   );
 };
