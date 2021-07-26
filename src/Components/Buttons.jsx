@@ -2,7 +2,7 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-const Buttons = ({ breakfastFn, setBreakfast }) => {
+const Buttons = ({ setBreakfast }) => {
   return (
     <div
       className="Buttons"
@@ -20,7 +20,6 @@ const Buttons = ({ breakfastFn, setBreakfast }) => {
       <button>All</button>
       <button 
       onClick={() => {
-          breakfastFn();
           setBreakfast(true);
       }}>Breakfast</button>
       <button>Lunch</button>

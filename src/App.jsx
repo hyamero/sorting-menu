@@ -10,11 +10,6 @@ import Buttons from "./Components/Buttons";
 function App() {
   const [breakfast, setBreakfast] = useState(false);
 
-  const breakfastFn = () => {
-    let lol = MenuData.filter((item) => item.category === "breakfast");
-    console.log(lol);
-  };
-
   return (
     <div
       className="App"
@@ -23,7 +18,7 @@ function App() {
         height: 100vh;
       `}
     >
-      <Buttons breakfastFn={breakfastFn} setBreakfast={setBreakfast} />
+      <Buttons setBreakfast={setBreakfast} />
       <MenuItems items={MenuData} breakfast={breakfast} />
 
       <Global
