@@ -10,6 +10,10 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        .menu-items {
+            padding: 1rem;
+        }
+
         img {
           height: 100px;
         }
@@ -34,9 +38,13 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
               src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
               alt="food burger"
             />
+            <div className="item-content">
+            <div className="item-title-box">
             <h5 className="item-title">{item.title}</h5>
-            <h6 className="item-category">{item.category}</h6>
+            <h5 className='item-price' >{item.price}</h5>
+            </div>
             <p className="item-desc">{item.desc}</p>
+          </div>
           </div>
         ))}
       {breakfast &&
@@ -48,8 +56,10 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
+              <div className="item-title-box">
               <h5 className="item-title">{item.title}</h5>
-              <h6 className="item-category">{item.category}</h6>
+            <h5 className='item-price' >{item.price}</h5>
+              </div>
               <p className="item-desc">{item.desc}</p>
             </div>
           ))}
@@ -62,8 +72,10 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
+              <div className="item-title-box">
               <h5 className="item-title">{item.title}</h5>
-              <h6 className="item-category">{item.category}</h6>
+            <h5 className='item-price' >{item.price}</h5>
+              </div>
               <p className="item-desc">{item.desc}</p>
             </div>
           ))}
@@ -76,8 +88,10 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
+              <div className="item-title-box">
               <h5 className="item-title">{item.title}</h5>
-              <h6 className="item-category">{item.category}</h6>
+            <h5 className='item-price' >{item.price}</h5>
+              </div>
               <p className="item-desc">{item.desc}</p>
             </div>
           ))}

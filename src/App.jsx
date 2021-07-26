@@ -1,14 +1,14 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, Global } from "@emotion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import MenuItems from "./Components/MenuItems";
 import MenuData from "./Components/MenuData";
 import Buttons from "./Components/Buttons";
 
 function App() {
-  const [all, setAll] = useState(false);
+  const [all, setAll] = useState(true);
   const [breakfast, setBreakfast] = useState(false);
   const [lunch, setLunch] = useState(false);
   const [shakes, setShakes] = useState(false);
@@ -46,7 +46,7 @@ function App() {
           }
 
           .container {
-            width: 80%;
+            width: 70%;
             padding: 100px 0;
             margin: auto;
           }

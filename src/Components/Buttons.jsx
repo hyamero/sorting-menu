@@ -20,7 +20,6 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
       <button
         onClick={() => {
           setAll(true);
-          setAll(false);
           setBreakfast(false);
           setLunch(false);
           setShakes(false);
@@ -33,7 +32,6 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
         onClick={() => {
           setBreakfast(true);
           setAll(false);
-          setAll(false);
           setLunch(false);
           setShakes(false);
         }}
@@ -45,7 +43,6 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
         onClick={() => {
           setLunch(true);
           setAll(false);
-          setAll(false);
           setBreakfast(false);
           setShakes(false);
         }}
@@ -56,7 +53,6 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
       <button
         onClick={() => {
           setShakes(true);
-          setAll(false);
           setAll(false);
           setBreakfast(false);
           setLunch(false);
