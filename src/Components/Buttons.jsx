@@ -8,12 +8,20 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
       className="Buttons"
       css={css`
         display: flex;
-        justify-content: center;
-        padding: 50px 0 0 0;
+        justify-content: space-between;
 
         button {
-          margin: 0 5px;
-          width: 4rem;
+          margin: 0 2rem;
+          height: 2rem;
+          border: none;
+          padding: 10px 0;
+
+          span {
+            padding: 6px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+          }
         }
       `}
     >
@@ -25,7 +33,7 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           setShakes(false);
         }}
       >
-        All
+        <span>All</span>
       </button>
 
       <button
@@ -36,7 +44,7 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           setShakes(false);
         }}
       >
-        Breakfast
+        <span>Breakfast</span>
       </button>
 
       <button
@@ -47,7 +55,7 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           setShakes(false);
         }}
       >
-        Lunch
+        <span>Lunch</span>
       </button>
 
       <button
@@ -58,7 +66,7 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           setLunch(false);
         }}
       >
-        Shakes
+        <span>Shakes</span>
       </button>
     </div>
   );

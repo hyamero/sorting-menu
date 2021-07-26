@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import MenuItems from "./Components/MenuItems";
 import MenuData from "./Components/MenuData";
-import Buttons from "./Components/Buttons";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const [all, setAll] = useState(true);
@@ -17,37 +17,38 @@ function App() {
     <div
       className="App"
       css={css`
-        background: coral;
+        background: #f0eff1;
         height: 100vh;
       `}
     >
-      <Buttons 
-      setAll={setAll}
-      setBreakfast={setBreakfast}
-      setLunch={setLunch}
-      setShakes={setShakes}
-       />
+      <Navbar
+        setAll={setAll}
+        setBreakfast={setBreakfast}
+        setLunch={setLunch}
+        setShakes={setShakes}
+      />
 
-      <MenuItems 
-      items={MenuData} 
-      all={all}
-      breakfast={breakfast}
-      lunch={lunch}
-      shakes={shakes}
-      
+      <MenuItems
+        items={MenuData}
+        all={all}
+        breakfast={breakfast}
+        lunch={lunch}
+        shakes={shakes}
       />
 
       <Global
         styles={css`
+          @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
           * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
           }
 
           .container {
-            width: 70%;
-            padding: 100px 0;
+            width: 80%;
             margin: auto;
           }
         `}

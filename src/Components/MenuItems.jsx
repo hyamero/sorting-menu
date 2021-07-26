@@ -9,25 +9,34 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
       css={css`
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: 70px;
 
         .menu-items {
-            padding: 1rem;
+          padding: 1rem;
+          display: flex;
+
+          .item-content {
+            display: grid;
+            padding: 0 1rem;
+
+            p {
+              font-size: 0.8rem;
+            }
+
+            .item-title-box {
+              display: flex;
+              justify-content: space-between;
+
+              .item-title,
+              .item-price {
+                font-size: 1rem;
+              }
+            }
+          }
         }
 
         img {
           height: 100px;
-        }
-
-        .item-title {
-          font-size: 1.3rem;
-        }
-
-        .item-category {
-          font-size: 1.2rem;
-        }
-
-        .item-desc {
-          font-size: 1rem;
         }
       `}
     >
@@ -39,12 +48,12 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
               alt="food burger"
             />
             <div className="item-content">
-            <div className="item-title-box">
-            <h5 className="item-title">{item.title}</h5>
-            <h5 className='item-price' >{item.price}</h5>
+              <div className="item-title-box">
+                <h5 className="item-title">{item.title}</h5>
+                <h5 className="item-price">{item.price}</h5>
+              </div>
+              <p className="item-desc">{item.desc}</p>
             </div>
-            <p className="item-desc">{item.desc}</p>
-          </div>
           </div>
         ))}
       {breakfast &&
@@ -56,11 +65,13 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
-              <div className="item-title-box">
-              <h5 className="item-title">{item.title}</h5>
-            <h5 className='item-price' >{item.price}</h5>
+              <div className="item-content">
+                <div className="item-title-box">
+                  <h5 className="item-title">{item.title}</h5>
+                  <h5 className="item-price">{item.price}</h5>
+                </div>
+                <p className="item-desc">{item.desc}</p>
               </div>
-              <p className="item-desc">{item.desc}</p>
             </div>
           ))}
       {lunch &&
@@ -72,11 +83,13 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
-              <div className="item-title-box">
-              <h5 className="item-title">{item.title}</h5>
-            <h5 className='item-price' >{item.price}</h5>
+              <div className="item-content">
+                <div className="item-title-box">
+                  <h5 className="item-title">{item.title}</h5>
+                  <h5 className="item-price">{item.price}</h5>
+                </div>
+                <p className="item-desc">{item.desc}</p>
               </div>
-              <p className="item-desc">{item.desc}</p>
             </div>
           ))}
       {shakes &&
@@ -88,11 +101,13 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
                 alt="food burger"
               />
-              <div className="item-title-box">
-              <h5 className="item-title">{item.title}</h5>
-            <h5 className='item-price' >{item.price}</h5>
+              <div className="item-content">
+                <div className="item-title-box">
+                  <h5 className="item-title">{item.title}</h5>
+                  <h5 className="item-price">{item.price}</h5>
+                </div>
+                <p className="item-desc">{item.desc}</p>
               </div>
-              <p className="item-desc">{item.desc}</p>
             </div>
           ))}
     </div>
