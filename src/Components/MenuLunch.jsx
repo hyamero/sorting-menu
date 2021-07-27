@@ -1,26 +1,9 @@
 import { motion } from "framer-motion";
 
 const MenuLunch = ({ lunch, items }) => {
-  const list = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -50 },
-  };
-
   const itemList = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
-  };
-
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
   };
 
   const itemContainer = {
@@ -40,10 +23,7 @@ const MenuLunch = ({ lunch, items }) => {
             <motion.div
               className="menu-items"
               key={item.id}
-              initial="hidden"
-              animate="visible"
-              variants={list}
-              transition={{ duration: 0.8 }}
+              variants={itemContainer}
             >
               <img
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"

@@ -8,16 +8,6 @@ import Lunch from "./MenuLunch";
 import Shakes from "./MenuShakes";
 
 const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
-  const list = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -50 },
-  };
-
-  const itemList = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  };
-
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -27,14 +17,6 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
         delayChildren: 0.3,
         staggerChildren: 0.2,
       },
-    },
-  };
-
-  const itemContainer = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
     },
   };
 

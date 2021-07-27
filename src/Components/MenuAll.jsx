@@ -1,26 +1,9 @@
 import { motion } from "framer-motion";
 
 const MenuAll = ({ all, items }) => {
-  const list = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -50 },
-  };
-
   const itemList = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
-  };
-
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
   };
 
   const itemContainer = {
