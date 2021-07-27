@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
 import AllItems from "./MenuAll";
 import Breakfast from "./MenuBreakfast";
 import Lunch from "./MenuLunch";
@@ -13,33 +14,31 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
     },
   };
 
   return (
-    <motion.div
-      className="MenuItems container"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      css={css`
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 30px;
-        padding: 40px 0;
-        background: #fff;
-        border-radius: 50px;
-      `}
-    >
-      <AllItems all={all} items={items} />
-      <Breakfast breakfast={breakfast} items={items} />
-      <Lunch lunch={lunch} items={items} />
-      <Shakes shakes={shakes} items={items} />
-    </motion.div>
+    <AnimatePresence>
+      <motion.div
+        className="MenuItems container"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        css={css`
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 30px;
+          padding: 40px 0;
+          background: #fff;
+          border-radius: 50px;
+        `}
+      >
+        <AllItems all={all} items={items} />
+        <Breakfast breakfast={breakfast} items={items} />
+        <Lunch lunch={lunch} items={items} />
+        <Shakes shakes={shakes} items={items} />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
