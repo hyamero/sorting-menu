@@ -14,13 +14,39 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
     hidden: { opacity: 0 },
   };
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemContainer = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div
+    <motion.div
       className="MenuItems container"
+      variants={container}
+      initial="hidden"
+      animate="visible"
       css={css`
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-top: 70px;
+        margin-top: 20px;
+        padding: 40px 0;
+        background: #fff;
+        border-radius: 50px;
 
         .menu-items {
           padding: 1rem 2.5rem;
@@ -56,10 +82,7 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
           <motion.div
             className="menu-items"
             key={item.id}
-            initial="hidden"
-            animate="visible"
-            variants={list}
-            transition={{ duration: 0.8 }}
+            variants={itemContainer}
           >
             <img
               src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
@@ -99,10 +122,7 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
             <motion.div
               className="menu-items"
               key={item.id}
-              initial="hidden"
-              animate="visible"
-              variants={list}
-              transition={{ duration: 0.8 }}
+              variants={itemContainer}
             >
               <img
                 src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
@@ -221,7 +241,7 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
               </motion.div>
             </motion.div>
           ))}
-    </div>
+    </motion.div>
   );
 };
 

@@ -24,7 +24,7 @@ const Navbar = ({ setAll, setBreakfast, setLunch, setShakes }) => {
         setLunch={setLunch}
         setShakes={setShakes}
       />
-      <h3>visit us</h3>
+      <h3>dine with us.</h3>
     </div>
   );
 };
