@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, Global } from "@emotion/react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import MenuItems from "./Components/MenuItems";
 import MenuData from "./Components/MenuData";
