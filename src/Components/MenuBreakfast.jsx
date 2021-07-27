@@ -27,7 +27,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
               transition={{ delay: i * 0.3 }}
             >
               <img
-                src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+                src="https://miro.medium.com/max/1400/1*abe8PbkKJhU0kvj039vvKQ.png"
                 alt="food burger"
               />
               <motion.div className="item-content">

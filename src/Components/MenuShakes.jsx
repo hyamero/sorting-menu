@@ -26,7 +26,7 @@ const MenuShakes = ({ shakes, items }) => {
               transition={{ delay: i * 0.3 }}
             >
               <img
-                src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+                src="https://assets.umso.co/1/refreshing_ncum.svg"
                 alt="food burger"
               />
               <motion.div className="item-content">

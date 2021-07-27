@@ -52,6 +52,20 @@ function App() {
             font-family: "Poppins", sans-serif;
           }
 
+          body::-webkit-scrollbar {
+            width: 12px; /* width of the entire scrollbar */
+          }
+
+          body::-webkit-scrollbar-track {
+            background: #f0eff1; /* color of the tracking area */
+          }
+
+          body::-webkit-scrollbar-thumb {
+            background-color: #444444; /* color of the scroll thumb */
+            border-radius: 20px; /* roundness of the scroll thumb */
+            border: 3px solid #f0eff1; /* creates padding around scroll thumb */
+          }
+
           .container {
             width: 80%;
             margin: auto;

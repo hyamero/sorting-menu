@@ -25,7 +25,7 @@ const MenuAll = ({ all, items }) => {
             transition={{ delay: i * 0.3 }}
           >
             <img
-              src="https://miro.medium.com/max/1400/1*nKSANcE0nTsmnFY3w4O1dQ.png"
+              src="https://global-uploads.webflow.com/5e7e842ba1676d8251b3a0cf/5e9532284d835ba63640cd18_undraw_wine_tasting_30vw.svg"
               alt="food burger"
             />
             <motion.div className="item-content">
