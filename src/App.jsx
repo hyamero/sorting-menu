@@ -68,6 +68,10 @@ function App() {
             border: 3px solid #f0eff1; /* creates padding around scroll thumb */
           }
 
+          body {
+            background: #f0eff1;
+          }
+
           .container {
             width: 80%;
             margin: auto;
