@@ -3,6 +3,10 @@
 import { css, jsx } from "@emotion/react";
 
 const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
+  const breakpoints = [576, 768, 992, 1200];
+
+  const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
+
   return (
     <div
       className="Buttons"
@@ -15,6 +19,12 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           padding: 10px;
           cursor: pointer;
           transition: 0.3s linear;
+          ${mq[2]} {
+            margin: 0 1rem;
+          }
+          ${mq[0]} {
+            margin: 0;
+          }
 
           &::after {
             content: "";
@@ -35,6 +45,12 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
             font-weight: 600;
             font-size: 1rem;
             margin: auto;
+            ${mq[2]} {
+              padding: 0;
+            }
+            ${mq[0]} {
+              font-size: 0.9rem;
+            }
           }
         }
       `}
