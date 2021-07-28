@@ -43,6 +43,12 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
           display: flex;
           border: #efefef 1px solid;
           border-top: none;
+          ${mq[0]} {
+            display: grid;
+            img {
+              margin-bottom: 10px;
+            }
+          }
 
           &:last-child {
             border-bottom: none;
