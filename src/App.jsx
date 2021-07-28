@@ -71,32 +71,10 @@ function App() {
             margin: auto;
           }
 
-          .menu-items {
-            padding: 1rem 2.5rem;
-            display: flex;
-
-            .item-content {
-              display: grid;
-              padding: 0 1rem;
-
-              p {
-                font-size: 0.8rem;
-              }
-
-              .item-title-box {
-                display: flex;
-                justify-content: space-between;
-
-                .item-title,
-                .item-price {
-                  font-size: 1rem;
-                }
-              }
+          @media screen and (max-width: 768px) {
+            .App {
+              background: coral;
             }
-          }
-
-          img {
-            height: 100px;
           }
         `}
       />

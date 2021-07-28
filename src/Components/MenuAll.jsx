@@ -22,9 +22,11 @@ const MenuAll = ({ all, items }) => {
             className="menu-items"
             key={item.id}
             variants={itemContainer}
-            transition={{ delay: i * 0.3 }}
+            transition={{ delay: i * 0.2 }}
+            layoutId={item.id}
           >
             <img
+              className="imgSmall"
               src="https://global-uploads.webflow.com/5e7e842ba1676d8251b3a0cf/5e9532284d835ba63640cd18_undraw_wine_tasting_30vw.svg"
               alt="food burger"
             />
@@ -33,14 +35,14 @@ const MenuAll = ({ all, items }) => {
                 <motion.h5
                   className="item-title"
                   variants={itemList}
-                  transition={{ delay: i * 0.1 + 0.6, duration: 0.5 }}
+                  transition={{ delay: i * 0.1 + 0.3, duration: 0.5 }}
                 >
                   {item.title}
                 </motion.h5>
                 <motion.h5
                   className="item-price"
                   variants={itemList}
-                  transition={{ delay: i * 0.1 + 0.8, duration: 0.5 }}
+                  transition={{ delay: i * 0.1 + 0.6, duration: 0.5 }}
                 >
                   ${item.price}
                 </motion.h5>
@@ -48,7 +50,7 @@ const MenuAll = ({ all, items }) => {
               <motion.p
                 className="item-desc"
                 variants={itemList}
-                transition={{ delay: i * 0.1 + 1.2, duration: 0.5 }}
+                transition={{ delay: i * 0.1 + 0.9, duration: 0.5 }}
               >
                 {item.desc}
               </motion.p>

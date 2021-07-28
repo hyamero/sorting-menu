@@ -24,7 +24,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
               className="menu-items"
               key={item.id}
               variants={itemContainer}
-              transition={{ delay: i * 0.3 }}
+              transition={{ delay: i * 0.2 }}
             >
               <img
                 src="https://miro.medium.com/max/1400/1*abe8PbkKJhU0kvj039vvKQ.png"
@@ -35,14 +35,14 @@ const MenuBreakfast = ({ breakfast, items }) => {
                   <motion.h5
                     className="item-title"
                     variants={itemList}
-                    transition={{ delay: i * 0.1 + 0.6, duration: 0.5 }}
+                    transition={{ delay: i * 0.1 + 0.3, duration: 0.5 }}
                   >
                     {item.title}
                   </motion.h5>
                   <motion.h5
                     className="item-price"
                     variants={itemList}
-                    transition={{ delay: i * 0.1 + 0.8, duration: 0.5 }}
+                    transition={{ delay: i * 0.1 + 0.6, duration: 0.5 }}
                   >
                     ${item.price}
                   </motion.h5>
@@ -50,7 +50,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
                 <motion.p
                   className="item-desc"
                   variants={itemList}
-                  transition={{ delay: i * 0.1 + 1.2, duration: 0.5 }}
+                  transition={{ delay: i * 0.1 + 0.9, duration: 0.5 }}
                 >
                   {item.desc}
                 </motion.p>

@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import AllItems from "./MenuAll";
 import Breakfast from "./MenuBreakfast";
@@ -17,28 +17,92 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
     },
   };
 
+  const breakpoints = [576, 768, 992, 1200];
+
+  const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
+
   return (
-    <AnimatePresence>
-      <motion.div
-        className="MenuItems container"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        css={css`
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          margin-top: 30px;
-          padding: 40px 0;
-          background: #fff;
-          border-radius: 50px;
-        `}
-      >
-        <AllItems all={all} items={items} />
-        <Breakfast breakfast={breakfast} items={items} />
-        <Lunch lunch={lunch} items={items} />
-        <Shakes shakes={shakes} items={items} />
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      className="MenuItems container"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      css={css`
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        ${mq[2]} {
+          grid-template-columns: 1fr;
+        }
+        margin-top: 30px;
+        padding: 40px 20px;
+        background: #fff;
+        border-radius: 50px;
+
+        .menu-items {
+          padding: 1rem 1.5rem;
+          display: flex;
+          border: #efefef 1px solid;
+          border-top: none;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:nth-child(odd) {
+            border-left: none;
+          }
+
+          &:nth-child(even) {
+            border-right: none;
+          }
+
+          .item-content {
+            display: grid;
+            padding: 0 1rem;
+
+            p {
+              font-size: 0.8rem;
+              ${mq[0]} {
+                font-size: 0.7rem;
+              }
+            }
+
+            .item-title-box {
+              display: flex;
+              justify-content: space-between;
+
+              .item-title,
+              .item-price {
+                font-size: 1rem;
+                ${mq[0]} {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+
+        img {
+          height: 100px;
+          ${mq[0]} {
+            height: 85px;
+          }
+          cursor: pointer;
+
+          &.imgSmall {
+            height: 85px;
+            ${mq[0]} {
+              height: 80px;
+            }
+          }
+        }
+      `}
+    >
+      <AllItems all={all} items={items} />
+      <Breakfast breakfast={breakfast} items={items} />
+      <Lunch lunch={lunch} items={items} />
+      <Shakes shakes={shakes} items={items} />
+    </motion.div>
   );
 };
 
