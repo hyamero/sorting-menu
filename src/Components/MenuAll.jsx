@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
-
+import imgAllMenu from "../img/undraw_barbecue.svg";
 const MenuAll = ({ all, items }) => {
-  const itemList = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  };
-
   const itemContainer = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -23,37 +18,14 @@ const MenuAll = ({ all, items }) => {
             key={item.id}
             variants={itemContainer}
             transition={{ delay: i * 0.2 }}
-            layoutId={item.id}
           >
-            <img
-              className="imgSmall"
-              src="https://global-uploads.webflow.com/5e7e842ba1676d8251b3a0cf/5e9532284d835ba63640cd18_undraw_wine_tasting_30vw.svg"
-              alt="food burger"
-            />
+            <img src={imgAllMenu} alt="food burger" />
             <motion.div className="item-content">
               <motion.div className="item-title-box">
-                <motion.h5
-                  className="item-title"
-                  variants={itemList}
-                  transition={{ delay: i * 0.1 + 0.3, duration: 0.5 }}
-                >
-                  {item.title}
-                </motion.h5>
-                <motion.h5
-                  className="item-price"
-                  variants={itemList}
-                  transition={{ delay: i * 0.1 + 0.6, duration: 0.5 }}
-                >
-                  ${item.price}
-                </motion.h5>
+                <motion.h5 className="item-title">{item.title}</motion.h5>
+                <motion.h5 className="item-price">${item.price}</motion.h5>
               </motion.div>
-              <motion.p
-                className="item-desc"
-                variants={itemList}
-                transition={{ delay: i * 0.1 + 0.9, duration: 0.5 }}
-              >
-                {item.desc}
-              </motion.p>
+              <motion.p className="item-desc">{item.desc}</motion.p>
             </motion.div>
           </motion.div>
         ))}

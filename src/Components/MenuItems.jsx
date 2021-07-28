@@ -10,10 +10,9 @@ import Shakes from "./MenuShakes";
 
 const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      scale: 1,
     },
   };
 
@@ -95,18 +94,11 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
         }
 
         img {
-          height: 100px;
+          height: 85px;
           ${mq[(0, 1)]} {
-            height: 85px;
+            height: 75px;
           }
           cursor: pointer;
-
-          &.imgSmall {
-            height: 85px;
-            ${mq[(0, 1)]} {
-              height: 80px;
-            }
-          }
         }
       `}
     >
