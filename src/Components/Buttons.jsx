@@ -19,11 +19,14 @@ const Buttons = ({ setAll, setBreakfast, setLunch, setShakes }) => {
           padding: 10px;
           cursor: pointer;
           transition: 0.3s linear;
+          outline: none;
+
           ${mq[2]} {
             margin: 0 1rem;
           }
           ${mq[0]} {
             margin: 0;
+            margin-top: 2rem;
           }
 
           &::after {

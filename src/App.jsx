@@ -18,7 +18,8 @@ function App() {
       className="App"
       css={css`
         background: #f0eff1;
-        height: 120vh;
+        height: 100%;
+        padding: 70px 0;
       `}
     >
       <Navbar
@@ -50,6 +51,7 @@ function App() {
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
+            --webkit-tap-highlight-color: transparent;
           }
 
           body::-webkit-scrollbar {
@@ -69,12 +71,6 @@ function App() {
           .container {
             width: 80%;
             margin: auto;
-          }
-
-          @media screen and (max-width: 768px) {
-            .App {
-              background: coral;
-            }
           }
         `}
       />

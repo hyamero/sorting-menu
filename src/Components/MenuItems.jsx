@@ -56,10 +56,16 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
 
           &:nth-child(odd) {
             border-left: none;
+            ${mq[2]} {
+              border-right: none;
+            }
           }
 
           &:nth-child(even) {
             border-right: none;
+            ${mq[2]} {
+              border-left: none;
+            }
           }
 
           .item-content {
@@ -68,7 +74,7 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
 
             p {
               font-size: 0.8rem;
-              ${mq[0]} {
+              ${mq[(0, 1)]} {
                 font-size: 0.7rem;
               }
             }
@@ -80,7 +86,7 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
               .item-title,
               .item-price {
                 font-size: 1rem;
-                ${mq[0]} {
+                ${mq[(0, 1)]} {
                   font-size: 0.8rem;
                 }
               }
@@ -90,14 +96,14 @@ const MenuItems = ({ items, all, breakfast, lunch, shakes }) => {
 
         img {
           height: 100px;
-          ${mq[0]} {
+          ${mq[(0, 1)]} {
             height: 85px;
           }
           cursor: pointer;
 
           &.imgSmall {
             height: 85px;
-            ${mq[0]} {
+            ${mq[(0, 1)]} {
               height: 80px;
             }
           }

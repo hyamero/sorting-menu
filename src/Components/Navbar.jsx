@@ -14,7 +14,6 @@ const Navbar = ({ setAll, setBreakfast, setLunch, setShakes }) => {
       css={css`
         display: flex;
         justify-content: space-around;
-        padding: 50px 0 0 0;
 
         .logo {
           font-size: 1.8rem;
